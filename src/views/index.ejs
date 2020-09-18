@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>Vista de EJS</title>
+    <script src="/js/jquery-3.5.1.min.js"></script>
+    <script src="/js/getHeroes.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>MYSQL + NODEJS + AJAX</h1>
+        <hr>
+    </div>
+    <div class="container">
+        <div class="container">
+
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">
+            Agregar heroe
+          </button>
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Heroe Nuevo</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                        </div>
+                        <form id="formulario" enctype="multipart/form-data">
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label for="formGroupExampleInput">Nombre</label>
+                                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="nombre">
+                                </div>
+                                <div class="form-group">
+                                    <label for="formGroupExampleInput2">Poder</label>
+                                    <input type="text" class="form-control" name="poder" id="poder" placeholder="poder">
+                                </div>
+                                <div class="form-group">
+                                    <label for="formGroupExampleInput2">Edad</label>
+                                    <input type="text" class="form-control" name="edad" id="edad" placeholder="edad">
+                                </div>
+                                <div class="form-group">
+                                    <label for="formGroupExampleInput2">Archivo</label>
+                                    <input type="file" class="form-control" id="image" name="image">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-warning" data-dismiss="modal">Cerrar</button>
+                                <input type="reset" class="btn btn-danger" value="Reiniciar">
+                                <input type="submit" class="btn btn-primary" value="Enviar" />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">NOMBRE</th>
+                    <th scope="col">PODER</th>
+                    <th scope="col">EDAD</th>
+                    <th scope="col">IMAGEN</th>
+                    <th scope="col">OPCIONES</th>
+                </tr>
+            </thead>
+            <tbody id="add">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+
+</html>
